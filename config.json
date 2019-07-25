@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    "."
+  ],
+  "baseUrl": "/",
+  "googleAnalytics": "UA-4197493-15",
+  "googleAdsense": {
+    "client": "ca-pub-1739452779444222",
+    "slot": "9661198645",
+    "format": "auto"
+  },
+  "colors": {
+    "h": "#16384c",
+    "border": "#3381ad",
+    "border_light": "#49b8f7",
+    "border_muted": "#9fcae3",
+    "main_background": "#e6d6ac",
+    "outer_background": "#09171f"
+  },
+  "icon": "http://i.imgur.com/4Pe8YfI.png",
+  "modId": "evilcraft",
+  "modName": "EvilCraft",
+  "modUrl": "https://www.curseforge.com/minecraft/mc-mods/evilcraft",
+  "bookName": "The Origins Of Darkness",
+  "sectionsFile": "mod_assets/evilcraft/info/book.xml",
+  "recipeOverrides": {}
+}
