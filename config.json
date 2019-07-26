@@ -10,12 +10,12 @@
     "format": "auto"
   },
   "colors": {
-    "h": "#16384c",
-    "border": "#3381ad",
-    "border_light": "#49b8f7",
-    "border_muted": "#9fcae3",
-    "main_background": "#e6d6ac",
-    "outer_background": "#09171f"
+    "h": "#300707",
+    "border": "#110c1f",
+    "border_light": "#6e509f",
+    "border_muted": "#e6bdb3",
+    "main_background": "#fcefe3",
+    "outer_background": "#110c1f"
   },
   "icon": "http://i.imgur.com/4Pe8YfI.png",
   "modId": "evilcraft",
@@ -23,5 +23,313 @@
   "modUrl": "https://www.curseforge.com/minecraft/mc-mods/evilcraft",
   "bookName": "The Origins Of Darkness",
   "sectionsFile": "mod_assets/evilcraft/info/book.xml",
-  "recipeOverrides": {}
+  "recipeOverrides": {},
+  "recipePredefineds": {
+    "evilcraft:bucket_poison": {
+      "input": [
+        [
+          {
+            "item": "minecraft:poisonous_potato",
+            "data": 0,
+            "count": 1
+          },
+          {
+            "item": "minecraft:fish",
+            "data": 3,
+            "count": 1
+          },
+          {
+            "item": "evilcraft:poison_sac",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:poisonous_potato",
+            "data": 0,
+            "count": 1
+          },
+          {
+            "item": "minecraft:fish",
+            "data": 3,
+            "count": 1
+          },
+          {
+            "item": "evilcraft:poison_sac",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:poisonous_potato",
+            "data": 0,
+            "count": 1
+          },
+          {
+            "item": "minecraft:fish",
+            "data": 3,
+            "count": 1
+          },
+          {
+            "item": "evilcraft:poison_sac",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:poisonous_potato",
+            "data": 0,
+            "count": 1
+          },
+          {
+            "item": "minecraft:fish",
+            "data": 3,
+            "count": 1
+          },
+          {
+            "item": "evilcraft:poison_sac",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:bucket",
+            "data": 0,
+            "count": 1
+          }
+        ]
+      ],
+      "output": {
+        "item": "forge:bucketfilled",
+        "data": 0,
+        "count": 1,
+        "nbt": "{FluidName:\"evilcraftpoison\",Amount:1000}"
+      },
+      "tags": []
+    },
+    "minecraft:potion_poison": {
+      "input": [
+        [
+          {
+            "item": "forge:bucketfilled",
+            "data": 0,
+            "count": 1,
+            "nbt": "{FluidName:\"evilcraftpoison\",Amount:1000}"
+          }
+        ],
+        [
+          {
+            "item": "minecraft:glass_bottle",
+            "data": 0,
+            "count": 1
+          }
+        ]
+      ],
+      "output": {
+        "item": "minecraft:potion",
+        "data": 0,
+        "count": 1,
+        "nbt": "{Potion:\"minecraft:poison\"}"
+      },
+      "tags": []
+    },
+    "evilcraft:box_of_eternal_closure_filled": {
+      "input": [
+        [
+          {
+            "item": "evilcraft:dark_gem_crushed",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_gem_crushed",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_gem_crushed",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:potion",
+            "data": 0,
+            "count": 1,
+            "nbt": "{Potion:\"minecraft:weakness\"}"
+          }
+        ],
+        [
+          {
+            "item": "minecraft:ender_chest",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:potion",
+            "data": 0,
+            "count": 1,
+            "nbt": "{Potion:\"minecraft:weakness\"}"
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_gem_crushed",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_gem_crushed",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_gem_crushed",
+            "data": 0,
+            "count": 1
+          }
+        ]
+      ],
+      "output": {
+        "item": "evilcraft:box_of_eternal_closure",
+        "data": 0,
+        "count": 1,
+        "nbt": "{spiritTag:{playerName:\"\",innerEntity:\"\",remainingLife:0,isSwarm:1b,swarmTier:3,buildupDuration:0,frozenDuration:0,playerId:\"\"}}"
+      },
+      "width": 3,
+      "height": 3,
+      "tags": []
+    },
+    "evilcraft:vengeance_pickaxe_fortune": {
+      "input": [
+        [
+          {
+            "item": "evilcraft:hardened_blood_shard",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:diamond",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:hardened_blood_shard",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:diamond",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_stick",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "minecraft:diamond",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [],
+        [
+          {
+            "item": "evilcraft:dark_stick",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        []
+      ],
+      "output": {
+        "item": "evilcraft:vengeance_pickaxe",
+        "data": 0,
+        "count": 1,
+        "nbt": "{ench:[{lvl:5s,id:35s},{lvl:3s,id:15s}]}"
+      },
+      "width": 3,
+      "height": 3,
+      "tags": []
+    },
+    "evilcraft:vein_sword_looting": {
+      "input": [
+        [],
+        [
+          {
+            "item": "evilcraft:dark_power_gem",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "item": "evilcraft:dark_power_gem",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [],
+        [
+          {
+            "item": "evilcraft:dark_spike",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_stick",
+            "data": 0,
+            "count": 1
+          }
+        ],
+        [
+          {
+            "item": "evilcraft:dark_spike",
+            "data": 0,
+            "count": 1
+          }
+        ]
+      ],
+      "output": {
+        "item": "evilcraft:vein_sword",
+        "data": 0,
+        "count": 1,
+        "nbt": "{ench:[{lvl:2s,id:21s}]}"
+      },
+      "width": 3,
+      "height": 3,
+      "tags": []
+    }
+  }
 }
