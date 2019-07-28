@@ -1,0 +1,25 @@
+.blood-infuser-recipe {
+    width: 300px;
+}
+
+.appendix .blood-infuser-recipe .appendix-icon {
+    position: relative;
+    top: 10px;
+    left: 133px;
+    margin-bottom: -28px;
+    z-index: 10;
+}
+
+.appendix .blood-infuser-recipe .tier-icon {
+    position: relative;
+    top: 4px;
+    left: 166px;
+    margin-bottom: -28px;
+    z-index: 10;
+}
+
+.appendix .blood-infuser-recipe .recipe-duration {
+    font-size: 10px;
+    position: relative;
+    top: 36px;
+}
