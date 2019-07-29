@@ -26,7 +26,7 @@ export class InfoBookAppendixHandlerBloodInfuserRecipe implements IInfoBookAppen
     this.resourceHandler = resourceHandler;
     this.templateRecipe = compilePug(__dirname + '/../../template/appendix/blood_infuser_recipe.pug');
 
-    const registry: IRecipeRegistrySqueezer = JSON.parse(
+    const registry: IRecipeRegistryBloodInfuser = JSON.parse(
       fs.readFileSync(join(registriesPath, 'blood_infuser_recipe.json'), "utf8"));
     this.registry = [];
     this.registryTagged = {};
@@ -112,7 +112,7 @@ export class InfoBookAppendixHandlerBloodInfuserRecipe implements IInfoBookAppen
 
 }
 
-export interface IRecipeRegistrySqueezer {
+export interface IRecipeRegistryBloodInfuser {
   recipes: IRecipeBloodInfuser[];
 }
 

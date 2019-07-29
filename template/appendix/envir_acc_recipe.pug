@@ -1,0 +1,16 @@
+div(class="envir-acc-recipe", typeof="schema:Action", property="schema:potentialAction")
+    div(class="appendix-icon", rel="schema:instrument") !{appendixIcon}
+    div(class="recipe-duration", property="schema:duration", datatype="xsd:duration")=duration
+    div(class="inputs", rel="schema:item")
+        .
+            !{input}
+        .
+            !{inputWeather}
+        .
+            !{inputFluid}
+    div(class="arrow") &rarr;
+    div(class="output", rel="schema:result")
+        .
+            !{output}
+        .
+            !{outputWeather}

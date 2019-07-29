@@ -1,8 +1,10 @@
-.blood-infuser-recipe {
+.blood-infuser-recipe,
+.envir-acc-recipe {
     width: 300px;
 }
 
-.appendix .blood-infuser-recipe .appendix-icon {
+.appendix .blood-infuser-recipe .appendix-icon,
+.appendix .envir-acc-recipe .appendix-icon {
     position: relative;
     top: 10px;
     left: 133px;
@@ -18,7 +20,8 @@
     z-index: 10;
 }
 
-.appendix .blood-infuser-recipe .recipe-duration {
+.appendix .blood-infuser-recipe .recipe-duration,
+.appendix .envir-acc-recipe .recipe-duration {
     font-size: 10px;
     position: relative;
     top: 36px;
