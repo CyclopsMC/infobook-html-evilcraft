@@ -1,5 +1,6 @@
 .blood-infuser-recipe,
-.envir-acc-recipe {
+.envir-acc-recipe,
+.broom-modifier {
     width: 300px;
 }
 
@@ -25,4 +26,30 @@
     font-size: 10px;
     position: relative;
     top: 36px;
+}
+
+.broom-modifier .broom-modifier-name {
+    font-weight: bold;
+}
+
+.broom-modifier .items {
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.broom-modifier-modifier {
+    margin-left: 4px;
+    vertical-align: center;
+    position: relative;
+    top: -8px;
+}
+
+.broom-modifier-modifier::before {
+    content: "x";
+}
+
+.broom-modifier .broom-modifier-item {
+    display: inline-block;
 }

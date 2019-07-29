@@ -2,6 +2,7 @@
 import {IInfobookPlugin, InfoBookInitializer, ResourceLoader} from "cyclops-infobook-html";
 import {ISerializeContext} from "cyclops-infobook-html/lib/serialize/HtmlInfoBookSerializer";
 import {InfoBookAppendixHandlerBloodInfuserRecipe} from "./appendix/InfoBookAppendixHandlerBloodInfuserRecipe";
+import {InfoBookAppendixHandlerBroomModifier} from "./appendix/InfoBookAppendixHandlerBroomModifier";
 import {InfoBookAppendixHandlerEnvirAccRecipe} from "./appendix/InfoBookAppendixHandlerEnvirAccRecipe";
 
 /**
@@ -16,6 +17,8 @@ export class InfobookPluginEvilCraft implements IInfobookPlugin {
       new InfoBookAppendixHandlerBloodInfuserRecipe(resourceLoader.getResourceHandler(), 'registries'));
     infoBookInitializer.registerAppendixHandler('evilcraft:envir_acc_recipe',
       new InfoBookAppendixHandlerEnvirAccRecipe(resourceLoader.getResourceHandler(), 'registries'));
+    infoBookInitializer.registerAppendixHandler('evilcraft:broom_modifier',
+      new InfoBookAppendixHandlerBroomModifier(resourceLoader.getResourceHandler(), 'registries'));
   }
 
   public getHeadSuffix(context: ISerializeContext): string {

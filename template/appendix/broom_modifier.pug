@@ -1,0 +1,7 @@
+div(class="broom-modifier")
+    span(class="broom-modifier-name")=name
+    ul(class="items", rel="schema:item")
+        each entry in entries
+            li
+                span(class="broom-modifier-item") !{entry.item}
+                span(class="broom-modifier-modifier")=entry.modifier
