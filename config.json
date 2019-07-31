@@ -17,7 +17,7 @@
     "main_background": "#fcefe3",
     "outer_background": "#110c1f"
   },
-  "icon": "/assets/icons/evilcraft__dark_gem__0.png",
+  "icon": "https://evilcraft.rubensworks.net/book/assets/icons/evilcraft__dark_gem__0.png",
   "modId": "evilcraft",
   "modName": "EvilCraft",
   "modUrl": "https://www.curseforge.com/minecraft/mc-mods/evilcraft",
