@@ -1,7 +1,6 @@
 # Cyclops Infobook HTML - EvilCraft
 
-[![Build Status](https://travis-ci.org/CyclopsMC/infobook-html-evilcraft.svg?branch=master)](https://travis-ci.org/CyclopsMC/infobook-html-evilcraft)
-[![Greenkeeper badge](https://badges.greenkeeper.io/CyclopsMC/infobook-html-evilcraft.svg)](https://greenkeeper.io/)
+[![Build Status](https://github.com/CyclopsMC/infobook-html-evilcraft/workflows/Build%20and%20Deploy/badge.svg)](https://evilcraft.rubensworks.net/book/)
 
 Output EvilCraft infobooks as HTML.
 
