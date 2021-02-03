@@ -39,7 +39,7 @@ export class InfoBookAppendixHandlerBroomModifier implements IInfoBookAppendixHa
 
     return {
       getName: (context) => this.resourceHandler.getTranslation(
-        'broom.modifiers.evilcraft.type.name', context.language),
+        'broom.modifiers.evilcraft.type', context.language),
       skipWrapper: modifier.items.length === 0,
       toHtml: (context: ISerializeContext, fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer) => {
         if (modifier.items.length === 0) {

@@ -13,10 +13,10 @@ export class InfobookPluginEvilCraft implements IInfobookPlugin {
   public readonly assetsPath = __dirname + '/../assets/';
 
   public load(infoBookInitializer: InfoBookInitializer, resourceLoader: ResourceLoader, config: any): void {
-    infoBookInitializer.registerAppendixHandler('evilcraft:blood_infuser_recipe',
-      new InfoBookAppendixHandlerBloodInfuserRecipe(resourceLoader.getResourceHandler(), 'registries'));
-    infoBookInitializer.registerAppendixHandler('evilcraft:envir_acc_recipe',
-      new InfoBookAppendixHandlerEnvirAccRecipe(resourceLoader.getResourceHandler(), 'registries'));
+    infoBookInitializer.registerAppendixHandler('evilcraft:blood_infuser',
+      new InfoBookAppendixHandlerBloodInfuserRecipe(resourceLoader.getResourceHandler(), 'registries', config.recipeOverrides));
+    infoBookInitializer.registerAppendixHandler('evilcraft:environmental_accumulator',
+      new InfoBookAppendixHandlerEnvirAccRecipe(resourceLoader.getResourceHandler(), 'registries', config.recipeOverrides));
     infoBookInitializer.registerAppendixHandler('evilcraft:broom_modifier',
       new InfoBookAppendixHandlerBroomModifier(resourceLoader.getResourceHandler(), 'registries'));
   }
