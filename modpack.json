@@ -1,18 +1,18 @@
 {
-  "minecraft": "1.16.5",
-  "forge": "36.0.42",
+  "minecraft": "1.18.1",
+  "forge": "39.0.5",
   "mods": [
     {
       "type": "curseforge",
       "project": "cyclops-core",
-      "artifact": "CyclopsCore-1.16.5",
-      "version": "1.11.2"
+      "artifact": "CyclopsCore-1.18.1",
+      "version": "1.13.1"
     },
     {
       "type": "curseforge",
       "project": "evilcraft",
-      "artifact": "EvilCraft-1.16.5",
-      "version": "1.1.0"
+      "artifact": "EvilCraft-1.18.1",
+      "version": "1.1.14"
     }
   ]
 }
