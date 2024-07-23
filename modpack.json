@@ -1,18 +1,18 @@
 {
-  "minecraft": "1.18.1",
-  "forge": "39.0.5",
+  "minecraft": "1.21",
+  "neoforge": "21.0.115-beta",
   "mods": [
     {
-      "type": "curseforge",
-      "project": "cyclops-core",
-      "artifact": "CyclopsCore-1.18.1",
-      "version": "1.13.1"
+      "type": "maven",
+      "artifact": "curse.maven:cyclopscore-232758:5557556",
+      "repo": "https://cursemaven.com/",
+      "name": "CyclopsCore-1.21-neoforge-1.19.6.jar"
     },
     {
-      "type": "curseforge",
-      "project": "evilcraft",
-      "artifact": "EvilCraft-1.18.1",
-      "version": "1.1.14"
+      "type": "maven",
+      "artifact": "curse.maven:evilcraft-74610:5557555",
+      "repo": "https://cursemaven.com/",
+      "name": "EvilCraft-1.21-neoforge-1.2.43.jar"
     }
   ]
 }
