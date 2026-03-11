@@ -41,7 +41,7 @@ export class InfoBookAppendixHandlerBroomModifier implements IInfoBookAppendixHa
       getName: (context) => this.resourceHandler.getTranslation(
         'broom.modifiers.evilcraft.type', context.language),
       skipWrapper: modifier.items.length === 0,
-      toHtml: (context: ISerializeContext, fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer) => {
+      toHtml: async (context: ISerializeContext, fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer) => {
         if (modifier.items.length === 0) {
           return '';
         }
@@ -50,14 +50,14 @@ export class InfoBookAppendixHandlerBroomModifier implements IInfoBookAppendixHa
     };
   }
 
-  protected serializeModifier(modifier: IBroomModifier, context: ISerializeContext,
-                              fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer) {
+  protected async serializeModifier(modifier: IBroomModifier, context: ISerializeContext,
+                                    fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer): Promise<string> {
     const name = this.resourceHandler.getTranslation(modifier.name, context.language);
-    const entries = modifier.items.map((i) => ({
-      item: serializer.createItemDisplay(this.resourceHandler,
+    const entries = await Promise.all(modifier.items.map(async (i) => ({
+      item: await serializer.createItemDisplay(this.resourceHandler,
         context, fileWriter, i.item, true),
       modifier: i.modifier,
-    }));
+    })));
 
     return this.templateRecipe({ name, entries });
   }
