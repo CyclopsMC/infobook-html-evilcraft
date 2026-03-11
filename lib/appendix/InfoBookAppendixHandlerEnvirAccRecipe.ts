@@ -65,7 +65,7 @@ export class InfoBookAppendixHandlerEnvirAccRecipe extends InfoBookAppendixHandl
     }
 
     const icon = join(__dirname, '../../icons_weather/', weather + '.png');
-    const iconUrl = await fileWriter.write('icons/' + basename(icon), () => createReadStream(icon));
+    const iconUrl = await fileWriter.write('icon/' + basename(icon), () => createReadStream(icon));
 
     return serializer.templateItem({
       ...context,
