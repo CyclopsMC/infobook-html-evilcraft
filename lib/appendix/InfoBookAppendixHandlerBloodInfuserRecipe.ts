@@ -25,24 +25,24 @@ export class InfoBookAppendixHandlerBloodInfuserRecipe
     return 'block.evilcraft.blood_infuser';
   }
 
-  protected serializeRecipe(recipe: IRecipeBloodInfuser, context: ISerializeContext,
-                            fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer): string {
+  protected async serializeRecipe(recipe: IRecipeBloodInfuser, context: ISerializeContext,
+                                  fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer): Promise<string> {
     // Input
-    const inputItem = serializer.createItemDisplay(this.resourceHandler,
+    const inputItem = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, recipe.input.item[0], true);
-    const inputFluid = serializer.createFluidDisplay(this.resourceHandler,
+    const inputFluid = await serializer.createFluidDisplay(this.resourceHandler,
       context, fileWriter, recipe.input.fluid, true);
 
     // Outputs
-    const output = serializer.createItemDisplay(this.resourceHandler,
+    const output = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, recipe.output.item, true);
 
-    const appendixIcon = serializer.createItemDisplay(this.resourceHandler,
+    const appendixIcon = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, { item: 'evilcraft:blood_infuser' }, false);
 
     let tierIcon;
     if (recipe.tier > 0) {
-      tierIcon = serializer.createItemDisplay(this.resourceHandler,
+      tierIcon = await serializer.createItemDisplay(this.resourceHandler,
         context, fileWriter, { item: 'evilcraft:promise_tier_' + recipe.tier }, false);
     }
 

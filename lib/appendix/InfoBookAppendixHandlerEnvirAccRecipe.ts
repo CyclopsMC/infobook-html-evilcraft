@@ -26,25 +26,25 @@ export class InfoBookAppendixHandlerEnvirAccRecipe extends InfoBookAppendixHandl
     return 'block.evilcraft.environmental_accumulator';
   }
 
-  protected serializeRecipe(recipe: IRecipeEnvirAcc, context: ISerializeContext,
-                            fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer) {
+  protected async serializeRecipe(recipe: IRecipeEnvirAcc, context: ISerializeContext,
+                                  fileWriter: IFileWriter, serializer: HtmlInfoBookSerializer): Promise<string> {
     // Input
-    const input = serializer.createItemDisplay(this.resourceHandler,
+    const input = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, recipe.input[0], true);
-    const inputWeather = this.createWeatherDisplay(this.resourceHandler, context, serializer,
+    const inputWeather = await this.createWeatherDisplay(this.resourceHandler, context, serializer,
       fileWriter, recipe.inputWeather);
-    const inputFluid = serializer.createFluidDisplay(this.resourceHandler, context,
+    const inputFluid = await serializer.createFluidDisplay(this.resourceHandler, context,
       fileWriter, recipe.fluid, true);
 
     // Outputs
-    const output = serializer.createItemDisplay(this.resourceHandler,
+    const output = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, recipe.output, true);
-    const outputWeather = this.createWeatherDisplay(this.resourceHandler, context, serializer,
+    const outputWeather = await this.createWeatherDisplay(this.resourceHandler, context, serializer,
       fileWriter, recipe.outputWeather);
 
-    const iconRegular = serializer.createItemDisplay(this.resourceHandler,
+    const iconRegular = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, { item: 'evilcraft:environmental_accumulator' }, false);
-    const iconSanguinary = serializer.createItemDisplay(this.resourceHandler,
+    const iconSanguinary = await serializer.createItemDisplay(this.resourceHandler,
       context, fileWriter, { item: 'evilcraft:sanguinary_environmental_accumulator' }, false);
 
     // Duration
@@ -57,15 +57,15 @@ export class InfoBookAppendixHandlerEnvirAccRecipe extends InfoBookAppendixHandl
       + this.templateRecipe({ input, inputFluid, inputWeather, output, outputWeather, appendixIcon: iconSanguinary });
   }
 
-  protected createWeatherDisplay(resourceHandler: ResourceHandler, context: ISerializeContext,
-                                 serializer: HtmlInfoBookSerializer, fileWriter: IFileWriter,
-                                 weather: Weather): string {
+  protected async createWeatherDisplay(resourceHandler: ResourceHandler, context: ISerializeContext,
+                                       serializer: HtmlInfoBookSerializer, fileWriter: IFileWriter,
+                                       weather: Weather): Promise<string> {
     if (weather === 'any') {
       return '<div class="item item-slot">&nbsp;</div>';
     }
 
     const icon = join(__dirname, '../../icons_weather/', weather + '.png');
-    const iconUrl = fileWriter.write('icons/' + basename(icon), createReadStream(icon));
+    const iconUrl = await fileWriter.write('icon/' + basename(icon), () => createReadStream(icon));
 
     return serializer.templateItem({
       ...context,
