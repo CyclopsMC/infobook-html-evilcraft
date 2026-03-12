@@ -99,7 +99,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^13.1.0":
+"@types/node@*":
   version "13.13.40"
   resolved "https://registry.npmjs.org/@types/node/-/node-13.13.40.tgz"
   integrity sha512-eKaRo87lu1yAXrzEJl0zcJxfUMDT5/mZalFyOkT44rnQps41eS2pfWzbaulSPpQLFNy29bFqn+Y5lOTL8ATlEQ==
@@ -546,15 +546,14 @@ cross-spawn@^6.0.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-cyclops-infobook-html@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.npmjs.org/cyclops-infobook-html/-/cyclops-infobook-html-5.1.0.tgz"
-  integrity sha512-kg4SZ1YS2dtwqqvB8bN7hqEppgu0AgKoLe5wdTW4l7Ca8WRlXxNWvAeTv+9ueeAEN0W4FDfxffVhtr/jMOdUpg==
+cyclops-infobook-html@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/cyclops-infobook-html/-/cyclops-infobook-html-5.2.0.tgz"
+  integrity sha512-ksStkiEa4wNNubCbFhX/qW0A1asbB2IG3l6xUJLIwMVKrZ97S3RPbul2kcky1vsbt6zz3rS1ja3E4p4NJrnMQg==
   dependencies:
     "@types/minimist" "^1.2.0"
     "@types/mkdirp" "^0.5.2"
     "@types/ncp" "^2.0.1"
-    "@types/node" "^13.1.0"
     "@types/node-fetch" "^2.5.0"
     "@types/pug" "^2.0.4"
     "@types/rimraf" "^3.0.0"
@@ -2168,10 +2167,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c= sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@^3.4.5:
-  version "3.5.3"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-3.5.3.tgz"
-  integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
+typescript@^5.0.0:
+  version "5.9.3"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz"
+  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
 uglify-js@^2.6.1:
   version "2.8.29"

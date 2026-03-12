@@ -4,15 +4,19 @@
   "mods": [
     {
       "type": "maven",
-      "artifact": "curse.maven:cyclopscore-232758:7637998",
-      "repo": "https://cursemaven.com/",
-      "name": "CyclopsCore-1.21.1-neoforge-1.29.0.jar"
+      "artifact": "org.cyclops.cyclopscore:cyclopscore-1.21.1-neoforge:1.29.0-944",
+      "repo": "https://maven.pkg.github.com/CyclopsMC/packages",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      }
     },
     {
       "type": "maven",
-      "artifact": "curse.maven:evilcraft-74610:7734018",
-      "repo": "https://cursemaven.com/",
-      "name": "EvilCraft-1.21.1-neoforge-1.2.83.jar"
+      "artifact": "org.cyclops.evilcraft:evilcraft-1.21.1-neoforge:1.2.83-812",
+      "repo": "https://maven.pkg.github.com/CyclopsMC/packages",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      }
     }
   ]
 }
