@@ -1,55 +1,83 @@
-.blood-infuser-recipe,
-.envir-acc-recipe,
-.broom-modifier {
-    width: 300px;
+/*
+ * EvilCraft specific appendix styles.
+ *
+ * The blood infuser and environmental accumulator recipes are laid out by the shared
+ * recipe rules in the base stylesheet, so only the tier icon and the broom modifiers
+ * are styled here, next to a few token overrides for the EvilCraft palette.
+ */
+
+:root {
+    /* The config sets border to the same value as the outer background, which is too dark
+       for the page frame and for links on parchment, so those are given their own values. */
+    --frame: var(--color-border-light);
+    --link: #8a1c1c;
+    --link-hover: #300707;
+    --button-border: #6e509f;
+    --page-line: color-mix(in srgb, #6e509f 35%, var(--page));
+    --ink: #2b1f1f;
 }
 
-.appendix .blood-infuser-recipe .appendix-icon,
-.appendix .envir-acc-recipe .appendix-icon {
-    position: relative;
-    top: 10px;
-    left: 133px;
-    margin-bottom: -28px;
-    z-index: 10;
+/* ---------- Blood infuser ---------- */
+
+/* The required tier is shown next to the machine, above the arrow. */
+.appendix .blood-infuser-recipe {
+    grid-template-areas:
+        'inputs icon tier output'
+        'inputs arrow arrow output'
+        'inputs duration duration output';
 }
 
 .appendix .blood-infuser-recipe .tier-icon {
-    position: relative;
-    top: 4px;
-    left: 166px;
-    margin-bottom: -28px;
-    z-index: 10;
+    grid-area: tier;
+    align-self: end;
+    position: static;
+    margin: 0;
 }
 
-.appendix .blood-infuser-recipe .recipe-duration,
-.appendix .envir-acc-recipe .recipe-duration {
-    font-size: 10px;
-    position: relative;
-    top: 36px;
+.appendix .blood-infuser-recipe .tier-icon:empty {
+    display: none;
+}
+
+/* ---------- Broom modifiers ---------- */
+
+.broom-modifier {
+    width: auto;
+    text-align: left;
+    font-size: 14px;
 }
 
 .broom-modifier .broom-modifier-name {
-    font-weight: bold;
+    font-weight: 700;
+    color: var(--color-h);
 }
 
 .broom-modifier .items {
-    font-size: 18px;
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
+    margin: 6px 0 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
 }
 
-.broom-modifier-modifier {
-    margin-left: 4px;
-    vertical-align: center;
-    position: relative;
-    top: -8px;
-}
-
-.broom-modifier-modifier::before {
-    content: "x";
+.broom-modifier .items li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .broom-modifier .broom-modifier-item {
-    display: inline-block;
+    display: inline-flex;
+}
+
+.broom-modifier-modifier {
+    position: static;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-muted);
+}
+
+.broom-modifier-modifier::before {
+    content: '\00d7';
 }
