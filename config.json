@@ -17,7 +17,8 @@
     "main_background": "#fcefe3",
     "outer_background": "#110c1f"
   },
-  "icon": "https://evilcraft.rubensworks.net/book/assets/icons/evilcraft__dark_dark_gem.png",
+  "icon": "https://evilcraft.rubensworks.net/book/assets/icon/evilcraft__dark_gem.png",
+  "bookIconItem": "evilcraft:origins_of_darkness",
   "modId": "evilcraft",
   "modName": "EvilCraft",
   "modUrl": "https://evilcraft.rubensworks.net/",
